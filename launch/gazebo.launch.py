@@ -34,7 +34,13 @@ def generate_launch_description():
     spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
                         arguments=['-entity', 'my_test_robot', '-topic', '/robot_description', '-x', '2.0', '-y', '2.0'],
                         output='screen')
-
+    
+    robot_move_node = Node(
+        package='robot_urdf',
+        executable='robot_move.py', # note to myself: need to write .py here
+        name='robot_move',
+        output='screen')
+    
     return LaunchDescription([
         DeclareLaunchArgument(name='model', default_value=default_model_path,
                                     description='Absolute path to robot urdf file'),
@@ -47,4 +53,5 @@ def generate_launch_description():
         ExecuteProcess(
             cmd=['rviz2', '-d', rviz_config_path],
             output='screen'),
+        robot_move_node
     ])
