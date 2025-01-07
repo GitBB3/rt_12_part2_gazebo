@@ -3,7 +3,7 @@ Assignment 2 part 2 (repository is the version in the turtlesim environment, see
 
 ## Run it
 
-ros2 launch robot_urdf gazebo.launch.py
+ros2 launch rt_12_part2_gazebo gazebo.launch.py
 
 ## Change the velocity command
 The current command is a linear velocity of Vx = 0.5 and an angular velocity of Wz = 0.1 (ls 18-19 in robot_move.py).
