@@ -1,5 +1,5 @@
 # robot_urdf
-Assignment 2 part 2 (repository is the version in the turtlesim environment, this is the required version with RViz and Gazebo)
+Assignment 2 part 2 (repository is the version in the turtlesim environment, see repository rt_12, this is the required version with RViz and Gazebo)
 
 ## Run it
 
